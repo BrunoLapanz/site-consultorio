@@ -1,0 +1,131 @@
+/* esconde o checkbox do menu mobile */
+#menu-toggle {
+  display: none;
+}
+
+/* FAIXA DE CONVÊNIOS FIXA NO TOPO AO ROLAR A PÁGINA */
+.topo-convenios {
+  background: rgba(143, 31, 43, 0.08);
+  font-size: 0.85rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 6px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topo-convenios .container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-cinza-escuro);
+  justify-content: center;
+}
+
+.topo-convenios i {
+  color: var(--cor-bordo);
+  margin-right: 4px;
+}
+
+/* (se você NÃO usa mais UL .lista-convenios, pode remover isso,
+   mas deixei porque estava no CSS “perfeito”) */
+.lista-convenios {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.lista-convenios li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.lista-convenios li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--cor-bordo);
+}
+
+@media (max-width: 720px) {
+  .topo-convenios .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .lista-convenios {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* HEADER */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  height: 65px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  color: var(--cor-cinza-escuro);
+}
+
+.brand-subtitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--cor-cinza);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--cor-cinza-escuro);
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--cor-bordo);
+}
+
+.nav-cta {
+  margin-left: 8px;
+}
